@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Throws</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Montserrat&family=Sacramento&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="middle-container">
+        <div class="profile">
+            <img class="profile-image" src="/images/Throws.jpg" alt="man-avatar">
+            <h2>Throws</h2>
+        </div>
+        <div class="topics">
+            <h3 class="topic-description">The Java throws keyword is used to declare an exception. It gives an
+                information to the programmer
+                that there may occur an exception. So, it is better for the programmer to provide the exception
+                handling code so that the normal flow of the program can be maintained.</h3>
+            <h3>Syntax</h3>
+            <div class="syntax">
+                <p class="code">return_type method_name() throws exception_class_name{</p>
+                <p class="code">//method code </p>
+                <p class="code">}</p>
+            </div>
+            <h3>Example</h3>
+            <div class="syntax">
+                <p class="code">import java.io.IOException; </p>
+                <p class="code">class Testthrows1 { </p>
+                <p class="code">&emsp;void m()throws IOException {</p>
+                <p class="code">&emsp;&emsp;throw new IOException("device error"); //checked exception</p>
+                <p class="code">&emsp;}</p>
+                <p class="code">&emsp;void n()throws IOException {</p>
+                <p class="code">&emsp;&emsp;m();</p>
+                <p class="code">&emsp;}</p>
+                <p class="code">&emsp;void p() {</p>
+                <p class="code">&emsp;&emsp;try {</p>
+                <p class="code">&emsp;&emsp;&emsp;n();</p>
+                <p class="code">&emsp;&emsp;} catch(Exception e) {</p>
+                <p class="code">&emsp;&emsp;&emsp;System.out.println("exception handled");</p>
+                <p class="code">&emsp;&emsp;}</p>
+                <p class="code">&emsp;}</p>
+                <p class="code">&emsp;public static void main(String args[]) {</p>
+                <p class="code">&emsp;&emsp;Testthrows1 obj=new Testthrows1();</p>
+                <p class="code">&emsp;&emsp;obj.p();</p>
+                <p class="code">&emsp;&emsp;System.out.println("normal flow...");</p>
+                <p class="code">&emsp;}</p>
+                <p class="code">}</p>
+            </div>
+            <h3>Output</h3>
+            <div class="syntax">
+
+                <div class="output">
+                    <p>java -cp /tmp/KUGRLkIA0X Testthrows1</p>
+                    <p>exception handled</p>
+                    <p>normal flow...</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-container">
+            <p class="copyright">© Group 14.</p>
+        </div>
+
+</body>
+
+</html>

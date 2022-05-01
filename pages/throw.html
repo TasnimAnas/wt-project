@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Throw</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Montserrat&family=Sacramento&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="middle-container">
+        <div class="profile">
+            <img class="profile-image" src="/images/Throw.jpg" alt="man-avatar">
+            <h2>Throw</h2>
+        </div>
+        <div class="topics">
+            <h3 class="topic-description">The Java throw keyword is used to throw an exception explicitly. We specify
+                the exception object
+                which is to be thrown. The Exception has some message with it that provides the error description.
+                These exceptions may be related to user inputs, server, etc. </h3>
+            <h3>Syntax</h3>
+            <div class="syntax">
+                <p class="code">throw new exception_class("error message"); </p>
+            </div>
+            <h3>Example</h3>
+            <div class="syntax">
+                <p class="code"> public class TestThrow1 {</p>
+                <p class="code">&emsp;//function to check if person is eligible to vote or not</p>
+                <p class="code">&emsp;public static void validate(int age) { </p>
+                <p class="code">&emsp;&emsp;if(age &lt 18) { </p>
+                <p class="code">&emsp;&emsp;&emsp;//throw Arithmetic exception if not eligible to vote </p>
+                <p class="code">&emsp;&emsp;&emsp;throw new ArithmeticException("Person is not eligible to vote"); </p>
+                <p class="code">&emsp;&emsp;} </p>
+                <p class="code">&emsp;&emsp;else { </p>
+                <p class="code">&emsp;&emsp;&emsp;System.out.println("Person is eligible to vote!!"); </p>
+                <p class="code">&emsp;&emsp;} </p>
+                <p class="code">&emsp;} </p>
+                <p class="code">&emsp;//main method </p>
+                <p class="code">&emsp;public static void main(String args[]){ </p>
+                <p class="code">&emsp;&emsp;//calling the function </p>
+                <p class="code">&emsp;&emsp;validate(13); </p>
+                <p class="code">&emsp;&emsp;System.out.println("rest of the code..."); </p>
+                <p class="code">&emsp;} </p>
+                <p class="code">}</p>
+            </div>
+            <h3>Output</h3>
+            <div class="syntax">
+
+                <div class="output">
+                    <p>java -cp /tmp/KUGRLkIA0X TestThrow1</p>
+                    <p>Exception in thread "main" java.lang.ArithmeticException: Person is not eligible to vote at
+                        TestThrow1.validate(TestThrow1.java:9)at TestThrow1.main(TestThrow1.java:18)</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-container">
+            <p class="copyright">© Group 14.</p>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Defined Exception</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Montserrat&family=Sacramento&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="middle-container">
+        <div class="profile">
+            <img class="profile-image" src="/images/UDE.jpg" alt="man-avatar">
+            <h2>User Defined Exception</h2>
+        </div>
+        <div class="topics">
+            <h3 class="topic-description">Java provides us the facility to create our own exceptions which are basically
+                derived classes of
+                Exception. Creating our own Exception is known as a custom exception or user-defined exception.
+                Basically, Java custom exceptions are used to customize the exception according to user needs. In
+                simple words, we can say that a User-Defined Exception or custom exception is creating your own
+                exception class and throwing that exception using the ‘throw’ keyword. </h3>
+            <h3>Syntax</h3>
+            <div class="syntax">
+                <p class="code">public class MyOwnException extends Exception {</p>
+                <p class="code">&emsp;public MyOwnException(String errorMessage) {</p>
+                <p class="code">&emsp;&emsp;super(errorMessage);</p>
+                <p class="code">&emsp;}</p>
+                <p class="code">}</p>
+            </div>
+            <h3>Example</h3>
+            <div class="syntax">
+                <p class="code">class InvalidAgeException extends Exception {</p>
+                <p class="code">&emsp;public InvalidAgeException (String str) {</p>
+                <p class="code">&emsp;// calling the constructor of parent Exception </p>
+                <p class="code">&emsp;super(str); </p>
+                <p class="code">&emsp;}</p>
+                <p class="code">}</p>
+                <p class="code">public class TestCustomException1 {</p>
+                <p class="code">&emsp;// method to check the age </p>
+                <p class="code">&emsp;static void validate (int age) throws InvalidAgeException{ </p>
+                <p class="code">&emsp;&emsp;if(age &lt 18){ </p>
+                <p class="code">&emsp;&emsp;&emsp;// throw an object of user defined exception </p>
+                <p class="code">&emsp;&emsp;&emsp;throw new InvalidAgeException("age is not valid to vote"); </p>
+                <p class="code">&emsp;&emsp;}</p>
+                <p class="code">&emsp;&emsp;else { </p>
+                <p class="code">&emsp;&emsp;&emsp;System.out.println("welcome to vote"); </p>
+                <p class="code">&emsp;&emsp;}</p>
+                <p class="code">&emsp;}</p>
+                <p class="code">&emsp;public static void main(String args[]) {</p>
+                <p class="code">&emsp;&emsp;try {</p>
+                <p class="code">&emsp;&emsp;&emsp;// calling the method </p>
+                <p class="code">&emsp;&emsp;&emsp;validate(13); </p>
+                <p class="code">&emsp;&emsp;}</p>
+                <p class="code">&emsp;&emsp;catch (InvalidAgeException ex) {</p>
+                <p class="code">&emsp;&emsp;&emsp;System.out.println("Caught the exception");</p>
+                <p class="code">&emsp;&emsp;&emsp;// printing the message from InvalidAgeException object </p>
+                <p class="code">&emsp;&emsp;&emsp;System.out.println("Exception occured: " + ex); </p>
+                <p class="code">&emsp;&emsp;}</p>
+                <p class="code">&emsp;&emsp;System.out.println("rest of the code..."); </p>
+                <p class="code">&emsp;}</p>
+                <p class="code">}</p>
+            </div>
+            <h3>Output</h3>
+            <div class="syntax">
+
+                <div class="output">
+                    <p>java -cp /tmp/KUGRLkIA0X Testthrows1</p>
+                    <p>Exception occured: InvalidAgeException: age is not valid to vote</p>
+                    <p>rest of the code...</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-container">
+            <p class="copyright">© Group 14.</p>
+        </div>
+
+</body>
+
+</html>
